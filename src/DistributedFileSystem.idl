@@ -1,0 +1,14 @@
+module DistributedFileSystem
+{
+  interface DFS
+  {
+  string openFile(in string fileName);
+  string readFile(in string fileName, in string recordNum);
+  string closeFile(in string fileName);
+  string getFileList();
+  string getOpenFiles();
+  string getFile(in string fileName);
+  string lockFile(in string fileName);
+  string unlockFile(in string fileName);
+  };
+};

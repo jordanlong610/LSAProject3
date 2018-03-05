@@ -1,0 +1,33 @@
+//Virginia
+
+dfsVirginia - ssh team1056@dfsVirginia
+
+orbd -ORBInitialHost 157.160.36.83 -ORBInitialPort 1056 -port 1057 -ORBServerHost 157.160.36.83&
+java Server.dfsServer -ORBInitialHost 157.160.36.83 -ORBInitialPort 1056 -port 1057 -ORBServerHost 157.160.36.83
+
+
+
+
+//Ireland
+dfsIreland - ssh team1056@dfsIreland 
+
+orbd -ORBInitialHost 157.160.36.84 -ORBInitialPort 1056 -port 1057 -ORBServerHost 157.160.36.84&
+java FileSystemApp.FileSystemServer -ORBInitialHost 157.160.36.84 -ORBInitialPort 1056 -port 1057 -ORBServerHost 157.160.36.84
+
+
+
+
+//Japan
+
+dfsJapan - ssh team1056@dfsJapan 
+
+orbd -ORBInitialHost 157.160.36.82 -ORBInitialPort 1056 -port 1057 -ORBServerHost 157.160.36.82&
+java FileSystemApp.FileSystemServer -ORBInitialHost 157.160.36.82 -ORBInitialPort 1056 -port 1057 -ORBServerHost 157.160.36.82
+
+
+
+//Local Host Testing
+
+orbd -ORBInitialHost localhost -ORBInitialPort 1056 -port 1057& 
+java FileSystemApp.FileSystemServer -ORBInitialPort 1056 -port 1057
+java FileSystemApp.FileSystemClient -ORBInitialHost clipper -ORBInitialPort 1056 -port 1057
